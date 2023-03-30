@@ -52,7 +52,19 @@ class Rapidash{
             this.vx = 0;
         }
 
-
 }
+       //Colision
+       collision(any) {
+        // Comprobamos si colisiona con algo
+        if (
+          this.x + this.s * 2 >= any.x &&
+          this.x <= any.x + any.width &&
+          this.y + this.s * 2 >= any.y
+        ) {
+          
+          return console.log("Has chocado");
+        } else {
+          return false;
+        }
+      }
 }
-
